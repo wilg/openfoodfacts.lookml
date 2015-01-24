@@ -3,16 +3,16 @@
   derived_table:
     sql: |
       SELECT DISTINCT
-        country_id
+        country_id AS id
       FROM ${foods_countries.SQL_TABLE_NAME}
     persist_for: 48 hours
-    indexes: [country_id]
+    indexes: [id]
 
   fields:
 
   - dimension: id
     primary_key: true
-    sql: ${TABLE}.country_id
+    sql: ${TABLE}.id
     
   - measure: country_list
     type: list

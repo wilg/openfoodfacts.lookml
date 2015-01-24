@@ -4,13 +4,14 @@
 - include: "*.dashboard.lookml"  # include all the dashboards
 
 - explore: foods
-  joins: 
+
+- explore: foods_countries
+  joins:
   
-    - join: foods_countries
-      relationship: one_to_many
+    - join: foods
+      relationship: many_to_one
       sql_on: ${foods.id} = ${foods_countries.food_id} 
       
     - join: countries
-      relationship: many_to_many
-      foreign_key: foods_countries.country_id
-
+      relationship: many_to_one
+      sql_on: ${countries.id} = ${foods_countries.country_id} 
