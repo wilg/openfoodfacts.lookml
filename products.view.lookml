@@ -1,4 +1,6 @@
-- view: products
+- view: foods
+  sql_table_name: products
+
   fields:
 
   - dimension: code
@@ -193,6 +195,372 @@
   - measure: count
     type: count
     drill_fields: [product_name, generic_name]
+
+  # NUTRIETONSS
+
+  - dimension: nutrition_facts.alcohol_100g
+    type: number
+    sql: ${TABLE}.alcohol_100g
+
+  - dimension: nutrition_facts.alphalinolenicacid_100g
+    type: number
+    sql: ${TABLE}.`alpha-linolenic-acid_100g`
+
+  - dimension: nutrition_facts.arachidicacid_100g
+    type: number
+    sql: ${TABLE}.`arachidic-acid_100g`
+
+  - dimension: nutrition_facts.arachidonicacid_100g
+    type: number
+    sql: ${TABLE}.`arachidonic-acid_100g`
+
+  - dimension: nutrition_facts.behenicacid_100g
+    type: number
+    sql: ${TABLE}.`behenic-acid_100g`
+
+  - dimension: nutrition_facts.bicarbonate_100g
+    type: number
+    sql: ${TABLE}.bicarbonate_100g
+
+  - dimension: nutrition_facts.biotin_100g
+    type: number
+    sql: ${TABLE}.biotin_100g
+
+  - dimension: nutrition_facts.butyricacid_100g
+    type: number
+    sql: ${TABLE}.`butyric-acid_100g`
+
+  - dimension: nutrition_facts.caffeine_100g
+    type: number
+    sql: ${TABLE}.caffeine_100g
+
+  - dimension: nutrition_facts.calcium_100g
+    type: number
+    sql: ${TABLE}.calcium_100g
+
+  - dimension: nutrition_facts.capricacid_100g
+    type: number
+    sql: ${TABLE}.`capric-acid_100g`
+
+  - dimension: nutrition_facts.caproicacid_100g
+    type: number
+    sql: ${TABLE}.`caproic-acid_100g`
+
+  - dimension: nutrition_facts.caprylicacid_100g
+    type: number
+    sql: ${TABLE}.`caprylic-acid_100g`
+
+  - dimension: nutrition_facts.carbohydrates_100g
+    type: number
+    sql: ${TABLE}.carbohydrates_100g
+
+  - dimension: nutrition_facts.carbonfootprint_100g
+    type: number
+    sql: ${TABLE}.`carbon-footprint_100g`
+
+  - dimension: nutrition_facts.casein_100g
+    type: number
+    sql: ${TABLE}.casein_100g
+
+  - dimension: nutrition_facts.ceroticacid_100g
+    type: number
+    sql: ${TABLE}.`cerotic-acid_100g`
+
+  - dimension: nutrition_facts.chloride_100g
+    type: number
+    sql: ${TABLE}.chloride_100g
+
+  - dimension: nutrition_facts.cholesterol_100g
+    type: number
+    sql: ${TABLE}.cholesterol_100g
+
+  - dimension: nutrition_facts.chromium_100g
+    type: number
+    sql: ${TABLE}.chromium_100g
+
+  - dimension: nutrition_facts.collagenmeatproteinratio_100g
+    type: number
+    sql: ${TABLE}.`collagen-meat-protein-ratio_100g`
+
+  - dimension: nutrition_facts.copper_100g
+    type: number
+    sql: ${TABLE}.copper_100g
+
+  - dimension: nutrition_facts.dihomogammalinolenicacid_100g
+    type: number
+    sql: ${TABLE}.`dihomo-gamma-linolenic-acid_100g`
+
+  - dimension: nutrition_facts.docosahexaenoicacid_100g
+    type: number
+    sql: ${TABLE}.`docosahexaenoic-acid_100g`
+
+  - dimension: nutrition_facts.eicosapentaenoicacid_100g
+    type: number
+    sql: ${TABLE}.`eicosapentaenoic-acid_100g`
+
+  - dimension: nutrition_facts.elaidicacid_100g
+    type: number
+    sql: ${TABLE}.`elaidic-acid_100g`
+
+  - dimension: nutrition_facts.energy_100g
+    type: number
+    sql: ${TABLE}.energy_100g
+
+  - dimension: nutrition_facts.erucicacid_100g
+    type: number
+    sql: ${TABLE}.`erucic-acid_100g`
+
+  - dimension: nutrition_facts.fat_100g
+    type: number
+    sql: ${TABLE}.fat_100g
+
+  - dimension: nutrition_facts.fiber_100g
+    type: number
+    sql: ${TABLE}.fiber_100g
+
+  - dimension: nutrition_facts.fluoride_100g
+    type: number
+    sql: ${TABLE}.fluoride_100g
+
+  - dimension: nutrition_facts.fructose_100g
+    type: number
+    sql: ${TABLE}.fructose_100g
+
+  - dimension: nutrition_facts.fruitsvegetablesnuts_100g
+    type: number
+    sql: ${TABLE}.`fruits-vegetables-nuts_100g`
+
+  - dimension: nutrition_facts.gammalinolenicacid_100g
+    type: number
+    sql: ${TABLE}.`gamma-linolenic-acid_100g`
+
+  - dimension: nutrition_facts.glucose_100g
+    type: number
+    sql: ${TABLE}.glucose_100g
+
+  - dimension: nutrition_facts.gondoicacid_100g
+    type: number
+    sql: ${TABLE}.`gondoic-acid_100g`
+
+  - dimension: nutrition_facts.iodine_100g
+    type: number
+    sql: ${TABLE}.iodine_100g
+
+  - dimension: nutrition_facts.iron_100g
+    type: number
+    sql: ${TABLE}.iron_100g
+
+  - dimension: nutrition_facts.lactose_100g
+    type: number
+    sql: ${TABLE}.lactose_100g
+
+  - dimension: nutrition_facts.lauricacid_100g
+    type: number
+    sql: ${TABLE}.`lauric-acid_100g`
+
+  - dimension: nutrition_facts.lignocericacid_100g
+    type: number
+    sql: ${TABLE}.`lignoceric-acid_100g`
+
+  - dimension: nutrition_facts.linoleicacid_100g
+    type: number
+    sql: ${TABLE}.`linoleic-acid_100g`
+
+  - dimension: nutrition_facts.magnesium_100g
+    type: number
+    sql: ${TABLE}.magnesium_100g
+
+  - dimension: nutrition_facts.maltodextrins_100g
+    type: number
+    sql: ${TABLE}.maltodextrins_100g
+
+  - dimension: nutrition_facts.maltose_100g
+    type: number
+    sql: ${TABLE}.maltose_100g
+
+  - dimension: nutrition_facts.manganese_100g
+    type: number
+    sql: ${TABLE}.manganese_100g
+
+  - dimension: nutrition_facts.meadacid_100g
+    type: number
+    sql: ${TABLE}.`mead-acid_100g`
+
+  - dimension: nutrition_facts.melissicacid_100g
+    type: number
+    sql: ${TABLE}.`melissic-acid_100g`
+
+  - dimension: nutrition_facts.molybdenum_100g
+    type: number
+    sql: ${TABLE}.molybdenum_100g
+
+  - dimension: nutrition_facts.monounsaturatedfat_100g
+    type: number
+    sql: ${TABLE}.`monounsaturated-fat_100g`
+
+  - dimension: nutrition_facts.montanicacid_100g
+    type: number
+    sql: ${TABLE}.`montanic-acid_100g`
+
+  - dimension: nutrition_facts.myristicacid_100g
+    type: number
+    sql: ${TABLE}.`myristic-acid_100g`
+
+  - dimension: nutrition_facts.nervonicacid_100g
+    type: number
+    sql: ${TABLE}.`nervonic-acid_100g`
+
+  - dimension: nutrition_facts.nucleotides_100g
+    type: number
+    sql: ${TABLE}.nucleotides_100g
+
+  - dimension: nutrition_facts.nutritionscorefr_100g
+    type: number
+    sql: ${TABLE}.`nutrition-score-fr_100g`
+
+  - dimension: nutrition_facts.nutritionscoreuk_100g
+    type: number
+    sql: ${TABLE}.`nutrition-score-uk_100g`
+
+  - dimension: nutrition_facts.oleicacid_100g
+    type: number
+    sql: ${TABLE}.`oleic-acid_100g`
+
+  - dimension: nutrition_facts.omega3fat_100g
+    type: number
+    sql: ${TABLE}.`omega-3-fat_100g`
+
+  - dimension: nutrition_facts.omega6fat_100g
+    type: number
+    sql: ${TABLE}.`omega-6-fat_100g`
+
+  - dimension: nutrition_facts.omega9fat_100g
+    type: number
+    sql: ${TABLE}.`omega-9-fat_100g`
+
+  - dimension: nutrition_facts.palmiticacid_100g
+    type: number
+    sql: ${TABLE}.`palmitic-acid_100g`
+
+  - dimension: nutrition_facts.pantothenicacid_100g
+    type: number
+    sql: ${TABLE}.`pantothenic-acid_100g`
+
+  - dimension: nutrition_facts.ph_100g
+    type: number
+    sql: ${TABLE}.ph_100g
+
+  - dimension: nutrition_facts.phosphorus_100g
+    type: number
+    sql: ${TABLE}.phosphorus_100g
+
+  - dimension: nutrition_facts.polyols_100g
+    type: number
+    sql: ${TABLE}.polyols_100g
+
+  - dimension: nutrition_facts.polyunsaturatedfat_100g
+    type: number
+    sql: ${TABLE}.`polyunsaturated-fat_100g`
+
+  - dimension: nutrition_facts.potassium_100g
+    type: number
+    sql: ${TABLE}.potassium_100g
+
+  - dimension: nutrition_facts.proteins_100g
+    type: number
+    sql: ${TABLE}.proteins_100g
+
+  - dimension: nutrition_facts.saturatedfat_100g
+    type: number
+    sql: ${TABLE}.`saturated-fat_100g`
+
+  - dimension: nutrition_facts.selenium_100g
+    type: number
+    sql: ${TABLE}.selenium_100g
+
+  - dimension: nutrition_facts.serumproteins_100g
+    type: number
+    sql: ${TABLE}.`serum-proteins_100g`
+
+  - dimension: nutrition_facts.silica_100g
+    type: number
+    sql: ${TABLE}.silica_100g
+
+  - dimension: nutrition_facts.sodium_100g
+    type: number
+    sql: ${TABLE}.sodium_100g
+
+  - dimension: nutrition_facts.starch_100g
+    type: number
+    sql: ${TABLE}.starch_100g
+
+  - dimension: nutrition_facts.stearicacid_100g
+    type: number
+    sql: ${TABLE}.`stearic-acid_100g`
+
+  - dimension: nutrition_facts.sucrose_100g
+    type: number
+    sql: ${TABLE}.sucrose_100g
+
+  - dimension: nutrition_facts.sugars_100g
+    type: number
+    sql: ${TABLE}.sugars_100g
+
+  - dimension: nutrition_facts.taurine_100g
+    type: number
+    sql: ${TABLE}.taurine_100g
+
+  - dimension: nutrition_facts.transfat_100g
+    type: number
+    sql: ${TABLE}.`trans-fat_100g`
+
+  - dimension: nutrition_facts.vitamina_100g
+    type: number
+    sql: ${TABLE}.`vitamin-a_100g`
+
+  - dimension: nutrition_facts.vitaminb12_100g
+    type: number
+    sql: ${TABLE}.`vitamin-b12_100g`
+
+  - dimension: nutrition_facts.vitaminb1_100g
+    type: number
+    sql: ${TABLE}.`vitamin-b1_100g`
+
+  - dimension: nutrition_facts.vitaminb2_100g
+    type: number
+    sql: ${TABLE}.`vitamin-b2_100g`
+
+  - dimension: nutrition_facts.vitaminb6_100g
+    type: number
+    sql: ${TABLE}.`vitamin-b6_100g`
+
+  - dimension: nutrition_facts.vitaminb9_100g
+    type: number
+    sql: ${TABLE}.`vitamin-b9_100g`
+
+  - dimension: nutrition_facts.vitaminc_100g
+    type: number
+    sql: ${TABLE}.`vitamin-c_100g`
+
+  - dimension: nutrition_facts.vitamind_100g
+    type: number
+    sql: ${TABLE}.`vitamin-d_100g`
+
+  - dimension: nutrition_facts.vitamine_100g
+    type: number
+    sql: ${TABLE}.`vitamin-e_100g`
+
+  - dimension: nutrition_facts.vitamink_100g
+    type: number
+    sql: ${TABLE}.`vitamin-k_100g`
+
+  - dimension: nutrition_facts.vitaminpp_100g
+    type: number
+    sql: ${TABLE}.`vitamin-pp_100g`
+
+  - dimension: nutrition_facts.zinc_100g
+    type: number
+    sql: ${TABLE}.zinc_100g
 
   # AVERAGE OF ALL FEARS
 
@@ -562,7 +930,7 @@
 
   # SUM OF JESUS
 
-    - measure: nutrition_facts.alcohol_100g_sum
+  - measure: nutrition_facts.alcohol_100g_sum
     type: sum
     sql: ${nutrition_facts.alcohol_100g}
 
