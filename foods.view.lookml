@@ -3,7 +3,7 @@
 
   fields:
 
-  - dimension: code
+  - dimension: id
     primary_key: true
     sql: ${TABLE}.code
 
