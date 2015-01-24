@@ -1,33 +1,33 @@
-- view: foods_countries
+- view: foods_brands
   derived_table:
     sql: |
       SELECT 
         code AS food_id,
-        SUBSTRING_INDEX(SUBSTRING_INDEX(products.countries_tags, ',', numbers.n), ',', -1) AS country_id
+        SUBSTRING_INDEX(SUBSTRING_INDEX(products.brands, ',', numbers.n), ',', -1) AS brand_id
       FROM
         (SELECT 1 n UNION ALL SELECT 2
          UNION ALL SELECT 3 UNION ALL SELECT 4) numbers INNER JOIN products
-        ON CHAR_LENGTH(products.countries_tags)
-           -CHAR_LENGTH(REPLACE(products.countries_tags, ',', ''))>=numbers.n-1
+        ON CHAR_LENGTH(products.brands)
+           -CHAR_LENGTH(REPLACE(products.brands, ',', ''))>=numbers.n-1
       ORDER BY
         code, n
     persist_for: 24 hours
-    indexes: [food_id, country_id]
+    indexes: [food_id, brand_id]
 
   fields:
 
   - dimension: food_id
     sql: ${TABLE}.food_id
 
-  - dimension: country_id
-    sql: ${TABLE}.country_id
+  - dimension: brand_id
+    sql: ${TABLE}.brand_id
 
-- view: countries
+- view: brands
   derived_table:
     sql: |
       SELECT DISTINCT
-        country_id AS id
-      FROM ${foods_countries.SQL_TABLE_NAME}
+        brand_id AS id
+      FROM ${foods_brands.SQL_TABLE_NAME}
     persist_for: 48 hours
     indexes: [id]
 
@@ -37,6 +37,6 @@
     primary_key: true
     sql: ${TABLE}.id
     
-  - measure: country_list
+  - measure: brand_list
     type: list
     list_field: id
